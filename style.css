@@ -1,0 +1,62 @@
+input[type=text], select {
+    width: 100%; /*html elementinin genişliğini oluşturma*/
+    padding: 12px 20px; /*içeriğin etrafında boşluk oluşturma*/
+    margin: 8px 0; /*html elemnetinin kendisi ve çevresi arasında boşluk*/
+    display: inline-block;/* etiketler üzerinde genişlik ve yükseklik ayarlamaya izin verir.*/
+    border: 1px solid #ccc; /*html nesnelerinin etrafına kenarlık eklemek için kullanılır*/
+    border-radius: 4px; /*HTML elemanlarına yuvarlak kenar özelliği verme işine yarıyor*/
+    box-sizing: border-box;
+  }
+
+  .textJSON {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+
+  }
+  
+  .textarea {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: both; /*Her iki yöne boyutlandırmaya izin verir*/
+    height: 300px;
+  }
+  
+  #submit {
+    width: 100%;
+    background-color: #bab9c2;
+    color: black;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer; /* İmlecin linkte olduğu gibi I şeklinde gözükmesini sağlar.*/
+  }
+  
+  #submit:hover {
+    background-color: #eec6ab;
+  }
+  
+  
+  div {
+    border-radius: 5px;
+    background-color: #234141;
+    padding: 50px;
+  }
+  
+  #params {
+    border-radius: 5px;
+    background-color: #ee7144;
+    padding: 0;
+    margin: 0;
+  }
+  /*Burada belirtilen class,id veya divlerin kaplayacağı alan, arka plan rengi gibi süsleme özellikleri girilmiştir.*/

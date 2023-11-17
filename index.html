@@ -1,0 +1,51 @@
+<!DOCTYPE HTML> <!--dokümanın tipinin html  olduğunu belirtiyorum. HTML dosyaları head ve body olmak üzere iki kısımdan oluşur.-->
+<html>
+<head> <!--head kısmında genellikle css uzantısı olan dosyamızı link etiketleri arasında belirtiriz.-->
+  <link rel="stylesheet" href="style.css"> <!--css dosyası html'e eklenir.-->
+</head>
+
+<body bgcolor="ebe5e4"> <!--body etiketinin açılmasıyla beraber arka plan rengi gri seçildi.-->
+
+<h2 align="center">🚀 Postman Clone</h2> <!--başlık hizalaması merkeze alındı.-->
+
+<div> <!--Blok seviyesindeki div etiketi tüm satırı kaplar.-->
+ 
+    <label for="url"><b>URL</b></label> <!--b etiketi ile içerisine yazılan URL metni kalınlaştırılarak labela yazılır.-->
+    <input type="text" id="url" ><br><br> <!-- <input>type ve id url, kullanıcının bir URL girmesine ve düzenlemesine izin vermek için kullanılır ve br etiketleri ile iki satır ara konulur.-->
+
+    <label for="type"><b>REQUEST</b></label> <!--burada request için bir label açılır.-->
+    <select id="requestType"> <!--select etiketi içerisinde requestleri seçmek için iki tipi (GET,POST) yazılmıştır ve br etiketleri ile iki satır ara konulur.-->
+      <option id="get" value="GET">GET</option>
+      <option id="post" value="POST">POST</option>
+    </select><br><br> 
+    
+    <label for="type"><b>DATA</b></label><br><br> <!--data için bir label oluşturulur ve br etketi ile iki satır ara verilir.-->
+
+    <input type="radio" name="contentType" id="jsonContent" value="json" checked> JSON <!--iki tane radiobutton input olarak oluşturulur ve diğer bilgileri (name,id,value) girilir son olarak ilk radiobutton checked ifadesiyle otomatik seçilidir.-->
+    <input type="radio" name="contentType" id="paramsContent" value="params"> CUSTOM  <!--radiobutoonlardan birinde JSON diğerinde ise CUSTOM ifadesi yer almaktadır.--> 
+    
+  
+     <div id="parametersBox"> <!--burada custom için div etiketiyle (Blok seviyesi olduğu için bir satırın tamamını kapsar) parametersbox açılmıştır.-->
+          <label for="url">Parameter 1</label> <!--Parameter 1 başlıklı bir label açılır.-->
+          <input type="text" id="parameterKey1" placeholder="Parameter 1 Key"> <!--parameterin text tipinde anahtarı ve değeri alınır.-->
+          <input type="text" id="parameterValue1" placeholder="Parameter 1 Value"> <!--placeholder inputun bulunduğu texte transparan bir yazıyla belirtilen ifadeyi yazar.-->
+          <button id="addParam" class="btn btn-primary">+</button> <!--eklenecek başka bir parameter varsa + işaretli butonla eklenebilecektir. btn btn-primary ifadesi bir dizi düğmedeki birincil eylemi tanımlar-->
+      </div><div id="params"></div> 
+
+  <div id="requestJsonBox"> <!--burada da json için div etiketiyle requestjsonbox açılmıştır.-->
+      <label for="requestJsonText">JSON</label> <!--Json başlıklı labela oluşturur.-->
+      <textarea class="textJSON" id="requestJsonText" rows="3"></textarea> <!--3 satır kaplayacak Json texti için bir text alanı oluşturulur.-->
+  </div>  
+
+  <label for="responseJsonText"><b>RESPONSE</b></label><br><br> <!--response için bir label açılır ve 2 satır boşluk bırakılır.-->
+   
+  <button onClick="copy()">Copy</button> <!--butona basıldığında kopyalama yapılır.-->
+  <textarea id='JSONresponse' class="textarea"></textarea> 
+  <br><br>
+  
+  <button id="submit">SEND</button> <!--send adlı bir buton oluşturuldu.-->
+ 
+</div>
+<script src="index.js"></script> <!--.js uzantılı dosyalar daima body nin içinde sonda yazılmalıdır.-->
+</body>
+</html>
